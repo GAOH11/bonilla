@@ -22,6 +22,17 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    z-index: 1;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.25);
+    z-index: 0;
 }
 .navigation {
     width: 40px;
@@ -34,6 +45,7 @@ html {
     background: none;
     perspective: 800;   
     transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+    z-index: 10;
 }
 .logo {
     opacity: 0;
@@ -222,7 +234,79 @@ html {
     transition-delay: .4s;
 }
 
-/*  SECTION HERO  */
+/*  SECTION NAV (.hero)  */
+.hero{
+    position: absolute;
+    max-height: 768px;
+    width: 80%;
+    margin-left: 20%;
+    color: var(--color_terciario);
+}
+.info_title {
+    border: 1px solid transparent;
+}
+.info_title figure{
+    max-width: 300px;
+    text-align: right;
+    margin: 25px 15px 0 auto;
+}
+.info_title figure img{
+    width: 100%;
+}
+.info_title .link_cont{
+    margin-top: 100px;
+    padding-top: 10px;
+    background-color: var(--color_primario);
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid var(--color_secundario);
+}
+.info_title .link_cont h2{
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+.info_title .link_cont p{
+    margin-top: 25px;
+    margin: 0;
+    float: left;
+    width: 40%;
+    text-align: right;
+}
+.info_title .link_cont h1{
+    margin-top: 25px;
+    margin: 0;
+    float: right;
+    text-align: left;
+    width: 60%;
+    font-size: 40px;
+}
+.info_title .link_cont h1 sub{
+    font-size: 20px;
+}
+.info_title .link_cont button{
+    width: 100%;
+    margin-top: 20px;
+    height: 40px;
+    border: none;
+    background-color: var(--color_secundario);
+    color: var(--color_primario);
+    font-size: 20px;
+}
+.img_header{
+    padding-top: 75vh;
+}
+.img_header h3{
+    padding: 10px 0;
+    background-color: rgba(0,0,0,0.75);
+    color: var(--color_primario);
+    text-align: center;
+}
+
+
+
+
+
+
 #container{
     border: 1px solid green;
 }
@@ -246,7 +330,15 @@ html {
 
 
 @media (max-width: 768px){
-    
+    .info_title figure{
+        max-width: 200px;
+    }
+    .link_cont h2{
+        font-size: 18px;
+    }
+    .link_cont h1 b{
+        font-size: 30px;
+    }
 }
 @media (max-height: 560px){
     .logo {
