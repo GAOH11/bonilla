@@ -14,6 +14,9 @@
 html {
     box-sizing: border-box;
 }
+body{
+    max-width: 1920px;
+}
 /* _-_-_-_-__ morphing navigation styling __-_-_-_-_ */
 .header {
     width: 100%;
@@ -23,6 +26,7 @@ html {
     background-size: cover;
     background-position: center;
     z-index: 1;
+    max-height: 1024px;
 }
 .header::before{
     content: '';
@@ -32,7 +36,7 @@ html {
     height: 100vh;
     width: 100%;
     background-color: rgba(0,0,0,0.25);
-    z-index: 0;
+    z-index: -1;
 }
 .navigation {
     width: 40px;
@@ -241,6 +245,8 @@ html {
     width: 80%;
     margin-left: 20%;
     color: var(--color_terciario);
+    max-width: calc(1920px - 20%);
+    border: 0 auto;
 }
 .info_title {
     border: 1px solid transparent;
@@ -291,9 +297,17 @@ html {
     background-color: var(--color_secundario);
     color: var(--color_primario);
     font-size: 20px;
+    cursor: pointer;
 }
+.info_title .link_cont button:hover{
+    background-color: var(--color_primario);
+    color: var(--color_secundario);
+    font-weight: 700;
+    border: 1px solid var(--color_secundario);
+}
+/* IMAGENES EN EL HEADER */
 .img_header{
-    padding-top: 75vh;
+    margin-top: -30vh;
 }
 .img_header h3{
     padding: 10px 0;
@@ -301,6 +315,40 @@ html {
     color: var(--color_primario);
     text-align: center;
 }
+#images{
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 400px));
+    justify-content: center;
+    grid-gap: 28px;
+}
+#images figure img{
+    width: 100%;  
+    vertical-align: top;
+}
+#images figure p{
+    background-color: var(--color_terciario);
+    padding: 15px 0;
+    color: var(--color_primario);
+    text-align-last: center;
+    margin-top: -50px;
+}
+#images figure button{
+    padding: 10px 25px;
+    background-color: var(--color_secundario);
+    border: 3px solid var(--color_secundario);
+    color: var(--color_primario);
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+}
+#images figure button:hover{
+    background-color: var(--color_primario);
+    color: var(--color_secundario);
+    font-weight: 700;
+    border: 3px solid var(--color_secundario);
+}
+
 
 
 
@@ -308,7 +356,7 @@ html {
 
 
 #container{
-    border: 1px solid green;
+    height: 100px;
 }
 #container article img{
     width: 100%;
@@ -328,7 +376,11 @@ html {
 
 
 
-
+@media (max-width: 1024px){
+    #images{
+        grid-template-columns: repeat(2, minmax(100px, 400px));
+    }
+}
 @media (max-width: 768px){
     .info_title figure{
         max-width: 200px;
@@ -338,6 +390,9 @@ html {
     }
     .link_cont h1 b{
         font-size: 30px;
+    }
+    #images{
+        grid-template-columns: repeat(1, minmax(100px, 400px));
     }
 }
 @media (max-height: 560px){
