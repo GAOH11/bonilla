@@ -36,7 +36,7 @@ body{
     height: 60vh;
     width: 100%;
     background-color: rgba(0,0,0,0.25);
-    z-index: 1;
+    z-index: 0;
 }
 .navigation {
     width: 40px;
@@ -401,7 +401,7 @@ hr{
     font-weight: 300;
 }
 .we {
-    margin-top: 25px;
+    margin: 25px 0;
 }
 .we .we_items{
     padding: 10px;
@@ -420,38 +420,70 @@ hr{
 .slider ul{
     display: flex;
     padding: 0;
-    width: 400%;
-    animation: cambio 20s infinite alternate ease-in;
+    width: 200%;
+    animation: cambio 10s infinite alternate ease-in;
+    height: 400px;
 }
 .slider ul li{
     width: 100%;
     list-style: none;
-    max-height: 400px;
-}
-.slider img{
     height: 100%;
-    object-fit: cover;
+    background-image: url('../img/landing.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.slider ul li h3{
+    font-weight: 300;
+}
+.slider ul li .social{
+    margin-top: 10px;
+}
+.slider ul li .social a{
+    font-size: 25px;
+    margin: 0 10px
+}
+.slider ul li .social a:nth-child(1){
+    color: rgb(13, 138, 240);
+}
+.slider ul li .social a:nth-child(2){
+    color: rgb(75, 236, 104);
+}
+.slider ul li .social a:nth-child(3){
+    color: rgb(0,0,0);
 }
 @keyframes cambio{
     0%{ margin-left: 0; }
-    20%{ margin-left: 0; }
+    45%{ margin-left: 0; }
 
-    25%{ margin-left: -100%; }
-    45%{ margin-left: -100%; }
-
-    50%{ margin-left: -200%; }
-    70%{ margin-left: -200%; }
-
-    75%{ margin-left: -300%; }
-    100%{ margin-left: -300%; }
+    55%{ margin-left: -100%; }
+    100%{ margin-left: -100%; }
 }
+
+.services{
+    padding: 2px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
 
 /*   FOOTER  */
 footer{
-    min-height: 250px;
+    min-height: 100px;
 }
 
 @media (max-width: 1024px){
