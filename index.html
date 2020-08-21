@@ -14,6 +14,7 @@
     <meta name="copyright" content="Propietario del copyright" />
     <meta name="robots" content="index"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Bonilla</title>
 </head>
@@ -30,6 +31,7 @@
                 <li><a href="">INICIO</a></li>
                 <li><a href="">PRODUCTOS</a></li>
                 <li><a href="">NOSOTROS</a></li>
+                <li><a href="">SERVICIOS</a></li>
                 <li><a href="">CONTACTO</a></li>
             </ul>
             <section class="navigation__social">
@@ -43,7 +45,7 @@
         <section class="hero">
             <div class="info_title">
                 <div class="link_cont">
-                    <h2>Trajes a medida</h2>
+                    <h2>Trajes a tu medida</h2>
                     <p>desde</p>
                     <h1><sub>S/</sub><b>250.00</b></h1>
                     <button>Contactar <i class="fa fa-arrow-right"></i></button>
@@ -51,40 +53,80 @@
             </div>
         </section>
     </header>
+
     <section class="img_header">
         <article id="images">
             <figure>
                 <img src="assets/img/suits.jpg"alt="">
                 <p>Ternos</p>
-                <button>Consultar</button>
+                <button id="btnTernos">Ver trabajos</button>
             </figure>
             <figure>
                 <img src="assets/img/suits.jpg"alt="">
                 <p>Yumpers</p>
-                <button>Consultar</button>
+                <button id="btnYumpers">Ver trabajos</button>
             </figure>
             <figure>
                 <img src="assets/img/suits.jpg"alt="">
                 <p>Faldas</p>
-                <button>Consultar</button>
+                <button id="btnFaldas">Ver trabajos</button>
             </figure>
             <figure>
                 <img src="assets/img/suits.jpg"alt="">
                 <p>Chalecos</p>
-                <button>Consultar</button>
+                <button id="btnChalecos">Ver trabajos</button>
             </figure>
             <figure>
                 <img src="assets/img/suits.jpg"alt="">
                 <p>Abrigos</p>
-                <button>Consultar</button>
+                <button id="btnAbrigos">Ver trabajos</button>
             </figure>
             <figure>
                 <img src="assets/img/suits.jpg"alt="">
                 <p>Pantalones</p>
-                <button>Consultar</button>
+                <button id="btnPantalones">Ver trabajos</button>
             </figure>
         </article>
+        <div class="consultar">
+            <a href="">Consultar</a>
+        </div>
     </section>
+
+    <!--  MODAL TERNOS  -->
+    <div style="display:none" id="modalTernos">
+        <h1>TERNOS</h1>
+    </div>
+    
+    <!--  MODAL YUMPERS  -->
+    <div style="display:none" id="modalYumpers">
+        <h1>YUMPERS</h1>
+    </div>
+    
+    <!--  MODAL TERNOS  -->
+    <div style="display:none" id="modalFaldas">
+        <h1>FALDAS</h1>
+    </div>
+    
+    <!--  MODAL TERNOS  -->
+    <div style="display:none" id="modalChalecos">
+        <h1>CHALECOS</h1>
+    </div>
+    
+    <!--  MODAL TERNOS  -->
+    <div style="display:none" id="modalAbrigos">
+        <h1>ABRIGOS</h1>
+    </div>
+    
+    <!--  MODAL TERNOS  -->
+    <div style="display:none" id="modalPantalones">
+        <h1>PANTALONES</h1>
+    </div>
+    
+
+
+
+
+
     <section id="container">
         <article class="description">
             <h2>Trajes, camisas y más perfectos para ti</h2>
@@ -215,15 +257,80 @@
                     </div>
                 </div>
             </div>
-            <a href="">Consultar</a>
         </article>
     </section>
     <footer>
-
+        <h1>¿Trabajamos juntos?</h1>
+        <div class="content_form">
+            <div class="inputs">
+                <form action="" method="dialog">
+                    <select class="input" required>
+                        <option selected hidden>-- Seleccione una opción --</option>
+                        <option>Confección</option>
+                        <option>Reparación</option>
+                        <option>Planchado</option>
+                        <option>Compostura</option>
+                    </select>
+                    <input type="text" class="input" placeholder="Nombre completo (*)" required>
+                    <input type="email" class="input" placeholder="Correo (*)" required>  
+                    <input type="tel" class="input" placeholder="Celular">
+                    <textarea placeholder="Mensaje" rows="5"></textarea>
+                    <button type="submit"><i class="fa fa-send"></i> Enviar</button>
+                </form>
+            </div>
+            <div class="info_general">
+                <figure>
+                    <img src="assets/img/Bonilla_black.png" alt="">
+                </figure>
+                <div class="info">
+                    <p><i class="fa fa-envelope"></i> correo@gmail.com</p>
+                    <p><i class="fa fa-compass"></i> Jr. Someone Nro 333 - Someonme</p>
+                    <p><i class="fa fa-phone"></i> (+51) 987 654 312</p>
+                </div>
+                <div class="redes">
+                    <a target="_blank" href="https://www.facebook.com/otakutamc/" class="social-icon"><i class="fa fa-facebook"></i></a>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=51954596131&text=Hola!%20Requiero%20un%20servicio." class="social-icon"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="info_end">
+            <p>Diseñado por<a style="font-size:18px" target="_blank" href="https://zosma.pe">ZOSMA</a></p>
+            <a target="_blank" href="https://zosma.pe"><img src="assets/img/zosma_.png" alt=""></a>
+            <a target="_blank" href="https://www.facebook.com/ZosmaTeam"><i class="fa fa-facebook"></i></a>
+            <a target="_blank" href="https://www.instagram.com/zosmateam/"><i class="fa fa-instagram"></i></a>
+        </div>
     </footer>
 
     <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#btnTernos').click(function(){
+                $('#modalTernos').modal()
+            })
+
+            $('#btnYumpers').click(function(){
+                $('#modalYumpers').modal()
+            })
+
+            $('#btnFaldas').click(function(){
+                $('#modalFaldas').modal()
+            })
+
+            $('#btnChalecos').click(function(){
+                $('#modalChalecos').modal()
+            })
+
+            $('#btnAbrigos').click(function(){
+                $('#modalAbrigos').modal()
+            })
+
+            $('#btnPantalones').click(function(){
+                $('#modalPantalones').modal()
+            })
+        })
+    </script>
     <script type="text/javascript">
         $(function() {
             $(".navigation__icon").click(function() {
@@ -231,5 +338,7 @@
             });
         });
     </script>
+    
+  
 </body>
 </html>

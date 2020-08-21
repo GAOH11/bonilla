@@ -311,6 +311,24 @@ body{
 .img_header{
     margin-top: 50px;
 }
+.img_header .consultar{
+    text-align: center;
+    margin-top: 30px;
+}
+.img_header .consultar a{
+    text-decoration: none;
+    color: var(--color_secundario);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 75px;
+    background-color: var(--color_primario);
+    border: 2px solid var(--color_secundario);
+}
+.img_header .consultar a:hover{
+    background-color: var(--color_secundario);
+    color: var(--color_primario);
+    transition: .5s;
+}
 #images{
     margin-top: 28px;
     display: grid;
@@ -359,7 +377,7 @@ hr{
     border: 1px solid rgba(0,0,0,0.05);
 }
 .description{
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(100,100,100,0.05);
 }
 #container h2{
     margin-top: 25px;
@@ -469,21 +487,7 @@ hr{
 }
 /*  SERVICIOS  */
 .services{
-    background: rgba(0,0,0,0.1);
     padding-bottom: 20px;
-}
-.services a{
-    border: 2px solid var(--color_secundario);
-    padding: 10px 50px;
-    background-color: var(--color_primario);
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--color_terciario);
-}
-.services a:hover{
-    color: var(--color_primario);
-    background-color: var(--color_secundario);
-    transition: .5s;
 }
 .general{
     display: flex;
@@ -501,7 +505,7 @@ hr{
     grid-gap: 10px;
 }
 .container .box{
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.05);
     padding-top: 20px;
     display: grid;
     font-size: 20px;
@@ -538,22 +542,120 @@ hr{
     grid-column: span 3;
     grid-row: span 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /*   FOOTER  */
 footer{
-    min-height: 100px;
+    outline: none;
+    margin: 30px auto 0 auto;
+    padding: 1px;
+    color: #2f2f2f;
+    text-align: center;
 }
+.content_form{
+    max-width: 1236px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-flow: row;
+    background-color: rgba(0,0,0,0.05);
+    padding-top: 50px;
+}
+.content_form .inputs{
+    flex: 50%;
+    order: 2;
+    padding: 20px;
+}
+.content_form .info_general{
+    flex: 50%;
+    order: 1;
+    margin: 0 50px;
+    padding: 20px;
+}
+.info_general figure{
+    width: 35%;
+    margin: 0 auto;
+}
+.info_general figure img{
+    width: 100%;
+}
+.info_general .info{
+    text-align: left;
+}
+.info_general .info p{
+    margin: 10px;
+}
+.info_general .redes{
+    margin-top: 50px;
+}
+.info_general .redes a{
+    min-height: 100px;
+    min-width: 100px;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0 15px;
+}
+.info_general .redes a:first-child{
+    color: rgb(13, 138, 240);
+    border-radius: 50%;
+    padding: 0 9px;
+    border: 1px solid rgb(13, 138, 240);
+}
+.info_general .redes a:last-child{
+    color: rgb(75, 236, 104);
+    border-radius: 50%;
+    padding: 0 5px;
+    border: 1px solid rgb(75, 236, 104);
+}
+.info_general .redes a:hover:first-child{
+    color: white;
+    background-color: rgb(13, 138, 240);
+}
+.info_general .redes a:hover:last-child{
+    color: white;
+    background-color: rgb(75, 236, 104);
+}
+.inputs form select{
+    width: 100%;
+    padding: 10px
+}
+.inputs form input,
+.inputs form textarea{
+    padding: 10px;
+    width: 96%;
+    margin-top: 10px;
+}
+.inputs form button{
+    margin-top: 15px;
+    padding: 10px 75px;
+    color: var(--color_primario);
+    background: var(--color_secundario);
+    border: 2px solid var(--color_secundario);
+    cursor: pointer;
+}
+.inputs form button:hover{
+    transition: .5s;
+    background: var(--color_primario);
+    color: var(--color_secundario);
+}
+
+/* INFO END */
+.info_end{
+    background-color: rgba(0,0,0,0.75);
+    padding: 10px 0 0 0;
+}
+.info_end p,
+.info_end p a{
+    color: var(--color_primario);
+    margin-bottom: 5px;
+}
+.info_end a{ 
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    margin: 0 15px
+}
+.info_end a img{
+    width: 25px;
+}
+/* MEDIAS QUERIES*/
 
 @media (max-width: 1024px){
     #images{
@@ -580,6 +682,15 @@ footer{
     }
     #container .info{
         grid-gap: 10px;
+    }
+    .content_form .inputs{
+        order: 1;
+        padding: 20px;
+    }
+    .content_form .info_general{
+        order: 2;
+        margin: 5px;
+        padding: 5px;
     }
 }
 @media (max-height: 560px){
@@ -608,4 +719,11 @@ footer{
     #container .info{
         grid-template-columns: repeat(2, minmax(100px, 300px));
     }
+    .content_form{
+        margin: 30px auto 0 auto;
+        display: flex;
+        flex-flow: column;
+        padding-top: 50px;
+    }
+    
 }
