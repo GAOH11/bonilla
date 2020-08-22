@@ -349,7 +349,7 @@
     <script>
     //EMAIL JS ENVIAR CORREOS
         $(document).ready(function(){
-        emailjs.init("user_fJmrKL57FhxvntRqgUSNd"); 
+            emailjs.init("user_fJmrKL57FhxvntRqgUSNd");
         });
         var myform = $("form#myform");
         myform.submit(function(event){
@@ -360,7 +360,7 @@
         }, {});
         // Change to your service ID, or keep using the default service
         var service_id = "default_service";
-        var template_id = "template_6eDjDuip";
+        var template_id = "template_lxQ7iksw";
         myform.find("button").text("Enviando ...");
         emailjs.send(service_id, template_id, params)
             .then(function(){ 
