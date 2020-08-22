@@ -295,7 +295,6 @@ body{
     font-size: 20px;
 }
 .info_title .link_cont button{
-    width: 100%;
     margin-top: 20px;
     height: 40px;
     border: none;
@@ -310,6 +309,16 @@ body{
     font-weight: 700;
     border: 1px solid var(--color_secundario);
     transition: .5s;
+}
+.info_title .link_cont a{
+    text-decoration: none;
+    width: 100%;
+    position: relative;
+    color: white;
+    background-color: var(--color_secundario);
+    display: block;
+    padding: 10px 0;
+    font-size: 20px;
 }
 /* IMAGENES EN EL HEADER */
 .img_header{
