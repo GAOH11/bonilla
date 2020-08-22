@@ -304,7 +304,7 @@
         <div class="content_form">
             <div class="inputs">
                 <form id="myform" method="post">
-                    <select class="input" required id="from_service" name="from_service">
+                    <select class="input" id="from_service" name="from_service">
                         <option selected hidden>-- Seleccione una opción --</option>
                         <option>Confección</option>
                         <option>Planchado</option>
@@ -349,7 +349,7 @@
     <script>
     //EMAIL JS ENVIAR CORREOS
         $(document).ready(function(){
-        emailjs.init("user_maXFpBrVpkWDWuTwec2wO"); 
+        emailjs.init("user_fJmrKL57FhxvntRqgUSNd"); 
         });
         var myform = $("form#myform");
         myform.submit(function(event){
