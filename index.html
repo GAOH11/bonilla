@@ -303,17 +303,18 @@
         <h1>¿Trabajamos juntos?</h1>
         <div class="content_form">
             <div class="inputs">
-                <form action="" method="dialog">
-                    <select class="input" required>
+                <form id="myform" method="post">
+                    <select class="input" required id="from_service" name="from_service">
                         <option selected hidden>-- Seleccione una opción --</option>
                         <option>Confección</option>
                         <option>Planchado</option>
                         <option>Compostura</option>
                     </select>
-                    <input type="text" class="input" placeholder="Nombre completo (*)" required>
-                    <input type="email" class="input" placeholder="Correo (*)" required>  
-                    <input type="tel" class="input" placeholder="Celular">
-                    <textarea placeholder="Mensaje" rows="5"></textarea>
+                    <input type="text" id="from_name" name="from_name" class="input" placeholder="Nombre completo (*)" required>
+                    <input type="email" id="from_email" name="from_email" class="input" placeholder="Correo (*)" required>  
+                    <input type="tel" id="from_cel" name="from_cel" class="input" placeholder="Celular">
+                    <textarea placeholder="Mensaje" id="from_message" name="from_message" rows="5"></textarea>
+                    <div class="g-recaptcha" style="max-width: 100%;overflow:hidden" data-sitekey="6LdQx70ZAAAAADAC4AA_o1raqYNGcEULywR5MPer"></div>
                     <button type="submit"><i class="fa fa-send"></i> Enviar</button>
                 </form>
             </div>
@@ -323,7 +324,7 @@
                 </figure>
                 <div class="info">
                     <p><i class="fa fa-envelope"></i> correo@gmail.com</p>
-                    <p><i class="fa fa-compass"></i> Jr. Someone Nro 333 - Someonme</p>
+                    <p><i class="fa fa-compass"></i> Jr. Tacna Nro 1331 Carhuamayo - Junin</p>
                     <p><i class="fa fa-phone"></i> (+51) 987 654 312</p>
                 </div>
                 <div class="redes">
@@ -343,6 +344,35 @@
     <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>  
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+    //EMAIL JS ENVIAR CORREOS
+        $(document).ready(function(){
+        emailjs.init("user_maXFpBrVpkWDWuTwec2wO"); 
+        });
+        var myform = $("form#myform");
+        myform.submit(function(event){
+        event.preventDefault();
+        var params = myform.serializeArray().reduce(function(obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
+        // Change to your service ID, or keep using the default service
+        var service_id = "default_service";
+        var template_id = "template_6eDjDuip";
+        myform.find("button").text("Enviando ...");
+        emailjs.send(service_id, template_id, params)
+            .then(function(){ 
+            alert("Mensaje enviado con exito.");
+            window.location = "https://bonilla.netlify.app/";
+            myform.find("button").text("Send");
+            }, function(err) {
+            alert("Error al enviar el mensaje!\r\n Error:\n " + JSON.stringify(err));
+            myform.find("button").text("Send");
+            });
+        return false;});
+    </script>
     <script type="text/javascript">
         $(document).ready(function(){
             $('#btnTernos').click(function(){
