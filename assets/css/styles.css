@@ -134,6 +134,7 @@ body{
 .navigation .navigation__ul a:hover {
     color: var(--color_secundario);
     box-shadow: 2px 5px;
+    transition: .5s;
 }
 .navigation .navigation__social {
     width: 100%;
@@ -170,10 +171,12 @@ body{
 .navigation .navigation__social-ul li:nth-child(1) a:hover{
     background-color: rgb(13, 138, 240);
     border-radius: 50%;
+    transition: .5s;
 }
 .navigation .navigation__social-ul li:nth-child(2) a:hover{
     background-color: rgb(75, 236, 104);
     border-radius: 50%;
+    transition: .5s;
 }
 .navigation .social-icon {
     width: 30px;
@@ -306,6 +309,7 @@ body{
     color: var(--color_secundario);
     font-weight: 700;
     border: 1px solid var(--color_secundario);
+    transition: .5s;
 }
 /* IMAGENES EN EL HEADER */
 .img_header{
@@ -340,14 +344,6 @@ body{
     width: 100%;  
     vertical-align: top;
 }
-#images figure p{
-    background-color: var(--color_terciario);
-    padding: 15px 0;
-    color: var(--color_primario);
-    text-align-last: center;
-    margin-top: -50px;
-    font-size: 18px;
-}
 #images figure button{
     padding: 10px 25px;
     background-color: var(--color_secundario);
@@ -362,6 +358,7 @@ body{
     color: var(--color_secundario);
     font-weight: 700;
     border: 3px solid var(--color_secundario);
+    transition: .5s;
 }
 
 /* CONTAINER*/
@@ -377,7 +374,7 @@ hr{
     border: 1px solid rgba(0,0,0,0.05);
 }
 .description{
-    background-color: rgba(100,100,100,0.05);
+    background-color: rgba(100,100,100,0.025);
 }
 #container h2{
     margin-top: 25px;
@@ -413,6 +410,7 @@ hr{
 }
 .info .item_info:hover{
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    transition: .5s;
 }
 .info .item_info h3{
     font-weight: 300;
@@ -529,7 +527,7 @@ hr{
     grid-gap: 10px;
 }
 .container .box{
-    background: rgba(0,0,0,0.05);
+    background-color: rgba(100,100,100,0.025);
     padding-top: 20px;
     display: grid;
     font-size: 20px;
@@ -544,6 +542,7 @@ hr{
 }
 .container .box:hover{
     background-color: var(--color_primario);   
+    transition: .5s;
 }
 .container .box img{
     position: relative;
@@ -578,7 +577,7 @@ footer{
     margin: 30px auto 0 auto;
     display: flex;
     flex-flow: row;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(100,100,100,0.025);
     padding-top: 50px;
 }
 .content_form .inputs{
@@ -618,7 +617,7 @@ footer{
 .info_general .redes a:first-child{
     color: rgb(13, 138, 240);
     border-radius: 50%;
-    padding: 0 9px;
+    padding: 0 8px;
     border: 1px solid rgb(13, 138, 240);
 }
 .info_general .redes a:last-child{
@@ -630,10 +629,12 @@ footer{
 .info_general .redes a:hover:first-child{
     color: white;
     background-color: rgb(13, 138, 240);
+    transition: .5s;
 }
 .info_general .redes a:hover:last-child{
     color: white;
     background-color: rgb(75, 236, 104);
+    transition: .5s;
 }
 .inputs form select{
     width: 100%;
@@ -666,6 +667,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 .info_end p,
 .info_end p a{
